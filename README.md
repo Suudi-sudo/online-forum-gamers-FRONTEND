@@ -111,19 +111,7 @@ The Online Forum for Gamers is a web-based platform designed for gamers to conne
 
 To build the frontend for production:
 
-```bash
-npm run build
-
-# Future Improvements
-Add real-time notifications for messages and post replies.
-Implement a user profile section with avatars and additional settings.
-Enhance the team functionality with team chat and leaderboards.
-Improve UI/UX with advanced animations and transitions.
-
-# 📜 License
-This project is licensed under the MIT License.
-
- ## links
+  ## links
  backend link : https://github.com/Suudi-sudo/online-forum-gamer-BACKEND.git
   -------------------------------------------
   video link : 
@@ -131,5 +119,12 @@ This project is licensed under the MIT License.
   slides link : https://docs.google.com/presentation/d/1eRp6Vg6aCkY-1iypJ1KnDLlqqE4s309ROtc_u8rGiaM/edit?usp=sharing
   ------------------------------
 
+```bash
+npm run build
+
+# 📜 License
+This project is licensed under the MIT License.
+
+ 
 
 
