@@ -124,11 +124,11 @@ Improve UI/UX with advanced animations and transitions.
 This project is licensed under the MIT License.
 
  ## links
- backend link : 
+ backend link : https://github.com/Suudi-sudo/online-forum-gamer-BACKEND.git
   -------------------------------------------
   video link : 
   -------------------------------------------------------
-  slides link : 
+  slides link : https://docs.google.com/presentation/d/1eRp6Vg6aCkY-1iypJ1KnDLlqqE4s309ROtc_u8rGiaM/edit?usp=sharing
   ------------------------------
 
 
