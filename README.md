@@ -123,5 +123,13 @@ Improve UI/UX with advanced animations and transitions.
 # 📜 License
 This project is licensed under the MIT License.
 
+ ## links
+ backend link : 
+  -------------------------------------------
+  video link : 
+  -------------------------------------------------------
+  slides link : 
+  ------------------------------
+
 
 
