@@ -17,7 +17,7 @@ const Home = () => {
     // Fetch all posts
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/posts');
+            const response = await axios.get('https://online-forum-gamer-backend.onrender.com/posts/');
             setPosts(response.data);
         } catch (error) {
             console.error('Error fetching posts', error);
@@ -33,14 +33,14 @@ const Home = () => {
         e.preventDefault();
         try {
             if (editingPostId) {
-                await axios.put(`http://localhost:5000/posts/${editingPostId}`, {
+                await axios.put(`https://online-forum-gamer-backend.onrender.com/posts/${editingPostId}`, {
                     title,
                     content,
                     image_url: imageUrl,
                 });
                 alert('Post updated successfully');
             } else {
-                await axios.post('http://localhost:5000/posts', {
+                await axios.post('https://online-forum-gamer-backend.onrender.com/posts/', {
                     title,
                     content,
                     user_id: userId,
@@ -74,7 +74,7 @@ const Home = () => {
     // Delete post
     const deletePost = async (postId) => {
         try {
-            await axios.delete(`http://localhost:5000/posts/${postId}`);
+            await axios.delete(`https://online-forum-gamer-backend.onrender.com/posts/${postId}`);
             alert('Post deleted successfully');
             fetchPosts(); // Refresh the post list after deleting
         } catch (error) {
@@ -85,7 +85,7 @@ const Home = () => {
     // Like post
     const likePost = async (postId) => {
         try {
-            await axios.post(`http://localhost:5000/posts/${postId}/like`, { user_id: userId });
+            await axios.post(`https://online-forum-gamer-backend.onrender.com/posts/${postId}/like`, { user_id: userId });
             alert('Post liked successfully');
         } catch (error) {
             console.error('Error liking post', error);
@@ -98,7 +98,7 @@ const Home = () => {
         if (!messageContent || !currentPostId) return;
 
         try {
-            await axios.post('http://localhost:5000/messages/', {
+            await axios.post('https://online-forum-gamer-backend.onrender.com/messages', {
                 sender_id: userId,
                 receiver_id: 1, // Replace with actual receiver ID
                 content: messageContent,

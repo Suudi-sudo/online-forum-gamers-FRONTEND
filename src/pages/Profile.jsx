@@ -21,7 +21,7 @@ const Profile = () => {
         console.log('Post Data:', postData); // Log data for debugging
         
         try {
-            const response = await axios.post('http://localhost:5000/posts/', postData);
+            const response = await axios.post('https://online-forum-gamer-backend.onrender.com/posts/', postData);
             alert('Post created successfully');
             resetForm();
         } catch (error) {

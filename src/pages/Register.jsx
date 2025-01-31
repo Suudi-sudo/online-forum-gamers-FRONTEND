@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -11,12 +13,14 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:5000/user', { email, password });
-          
-            navigate('/login'); 
+            await axios.post('https://online-forum-gamer-backend.onrender.com/user', { email, password });
+            toast.success('Registration successful! Redirecting to login...');
+            setTimeout(() => {
+                navigate('/login'); 
+            }, 2000); // Redirect after 2 seconds
         } catch (error) {
             console.error('Error during registration', error);
-            alert(error.response ? error.response.data.message : 'Registration failed');
+            toast.error(error.response ? error.response.data.message : 'Registration failed');
         }
     };
 
@@ -47,6 +51,7 @@ const Register = () => {
                     Already have an account? <a href="/login" className="text-blue-600 hover:underline">Login here</a>
                 </p>
             </form>
+            <ToastContainer />
         </div>
     );
 };

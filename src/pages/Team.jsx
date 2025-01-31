@@ -13,7 +13,7 @@ const Team = () => {
     // Fetch all teams
     const fetchTeams = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/teams/');
+            const response = await axios.get('https://online-forum-gamer-backend.onrender.com/teams/');
             setTeams(response.data);
         } catch (error) {
             console.error('Error fetching teams', error);
@@ -32,10 +32,10 @@ const Team = () => {
 
         try {
             if (editingTeamId) {
-                await axios.put(`http://localhost:5000/teams/${editingTeamId}`, postData);
+                await axios.put(`https://online-forum-gamer-backend.onrender.com/teams/${editingTeamId}`, postData);
                 alert('Team updated successfully');
             } else {
-                await axios.post('http://localhost:5000/teams/', postData);
+                await axios.post('https://online-forum-gamer-backend.onrender.com/teams/', postData);
                 alert('Team created successfully');
             }
             resetForm();
@@ -65,7 +65,7 @@ const Team = () => {
     // Delete team
     const deleteTeam = async (teamId) => {
         try {
-            await axios.delete(`http://localhost:5000/teams/${teamId}`);
+            await axios.delete(`https://online-forum-gamer-backend.onrender.com/teams/${teamId}`);
             alert('Team deleted successfully');
             fetchTeams(); // Refresh the team list after deleting
         } catch (error) {
@@ -77,7 +77,7 @@ const Team = () => {
      // Add member to team
      const addMemberToTeam = async (teamId) => {
          try {
-             await axios.post(`http://localhost:5000/teams/${teamId}/add-member`, 
+             await axios.post(`https://online-forum-gamer-backend.onrender.com/teams/${teamId}/add-member`, 
              { user_id: userIdToAdd }); // Ensure user ID is included here
              alert('Member added successfully');
              fetchTeams(); // Refresh the team list after adding a member
@@ -90,7 +90,7 @@ const Team = () => {
      // Remove member from team
      const removeMemberFromTeam = async (teamId) => {
          try {
-             await axios.post(`http://localhost:5000/teams/${teamId}/remove-member`, 
+             await axios.post(`https://online-forum-gamer-backend.onrender.com/teams/${teamId}/remove-member`, 
              { user_id: userIdToRemove }); // Ensure user ID is included here
              alert('Member removed successfully');
              fetchTeams(); // Refresh the team list after removing a member
