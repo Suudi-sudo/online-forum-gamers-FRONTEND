@@ -114,7 +114,7 @@ To build the frontend for production:
   ## links
  backend link : https://github.com/Suudi-sudo/online-forum-gamer-BACKEND.git
   -------------------------------------------
-  video link : 
+  video link : https://share.vidyard.com/watch/h1QBYnEnKuaZMZp73zH3Uy?
   -------------------------------------------------------
   slides link : https://docs.google.com/presentation/d/1eRp6Vg6aCkY-1iypJ1KnDLlqqE4s309ROtc_u8rGiaM/edit?usp=sharing
   ------------------------------
